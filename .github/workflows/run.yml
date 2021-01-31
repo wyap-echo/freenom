@@ -53,3 +53,9 @@ jobs:
       - name: Run
         run: |
           php run
+          
+      - name: Delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 1
